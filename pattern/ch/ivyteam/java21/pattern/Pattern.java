@@ -24,6 +24,7 @@ public class Pattern {
       case null -> System.out.println("Nothing to do");
       case JspPage(var jsp) -> System.out.println("Open JSP " + jsp);
       case RichDialog(var ulc) -> System.out.println("Open RichDialog " + ulc);
+      case HtmlDialog(var xhtml, var offline) when offline == true -> System.out.println("Open offline HtmlDialog " + xhtml);
       case HtmlDialog(var xhtml, var offline) -> System.out.println("Open HtmlDialog " + xhtml);
       case Form(var json) -> System.out.println("Open Form " + json);
     }
